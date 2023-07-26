@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
+import ChangeCurrency from './ChangeCurrency';
 
 const AllocationForm = (props) => {
     const { dispatch,remaining  } = useContext(AppContext);
@@ -12,7 +13,7 @@ const AllocationForm = (props) => {
 
             if(cost > remaining) {
                 alert("The value cannot exceed remaining funds  £"+remaining);
-                setCost("");
+                setCost("20000");
                 return;
             }
 
